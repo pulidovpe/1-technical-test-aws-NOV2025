@@ -23,3 +23,11 @@ variable "allowed_ingress_cidr"      {
   type = string
   default = null 
 }
+
+# EC2
+variable "ec2_name_prefix"       { type = string }
+variable "ec2_instance_count"    { type = number }
+variable "ec2_instance_type"     { type = string }
+variable "ec2_os"                { type = string }
+variable "ec2_key_name"          { type = string }
+variable "ec2_enable_public_ip"  { type = bool }
