@@ -14,32 +14,10 @@ sudo systemctl enable --now nginx
 sudo tee /var/www/html/index.html > /dev/null <<'EOF'
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="utf-8">
-  <title>¡ÉXITO TOTAL!</title>
-  <style>
-    body { background: #0f0f0f; color: #0f0; font-family: 'Courier New', monospace; text-align: center; padding: 50px; }
-    h1 { font-size: 4em; margin: 0.5em; }
-    pre { font-size: 1.4em; background: #000; padding: 25px; border: 3px solid #0f0; display: inline-block; border-radius: 10px; }
-    .blink { animation: blink 1s infinite; }
-    @keyframes blink { 50% { opacity: 0; } }
-  </style>
-</head>
 <body>
-  <h1>NGINX EN UBUNTU 22.04</h1>
-  <pre>
-   _   _  _____ _   _ _   __
-  | \ | |/ ____| \ | | | / /
-  |  \| | |  __|  \| | |/ / 
-  | . ` | | |_ | . ` |    \ 
-  | |\  | |__| | |\  | |\  \
-  |_| \_|\_____|_| \_|_| \_\
-                            
-  ¡Desplegado con Terraform 2025!
-  IP: $(curl -s ifconfig.me || hostname -I)
-  Hora: $(date)
-  </pre>
-  <p class="blink">¡TODO FUNCIONA!</p>
+  <h1>
+  ¡Bienvenido a la prueba técnica de <del>GCP</del> AWS!
+  </h1>
 </body>
 </html>
 EOF
