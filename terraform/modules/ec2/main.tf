@@ -20,7 +20,10 @@ locals {
 # AMI automática
 data "aws_ami" "this" {
   most_recent = true
-  owners      = var.os == "windows2022" ? ["amazon"] : ["amazon", "099720109477", "679593333241"]
+  owners = (
+    var.os == "windows2022" ? ["amazon"] : 
+    (startswith(var.os, "ubuntu") ? ["099720109477"] : ["amazon", "679593333241"])
+  )
 
   filter {
     name   = "name"
